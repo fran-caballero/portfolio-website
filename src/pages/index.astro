@@ -1,0 +1,240 @@
+---
+import { Image } from "astro:assets";
+import teamupThumbnail from "src/assets/teamup-thumbnail.jpg";
+import personalPicture from "src/assets/personal-picture-cropped.jpg";
+import BaseLayout from "src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Fran Caballero | Portfolio"
+  description="Portfolio de Fran Caballero, desarrollador full-stack."
+  ><main class="flex flex-col overflow-x-clip">
+    <div
+      class="relative mx-auto flex w-[80%] flex-col gap-8 py-20 md:w-[700px] lg:w-[900px]"
+    >
+      <header class="header flex flex-col gap-8">
+        <h1 class="name text-4xl font-bold whitespace-nowrap sm:text-5xl">
+          Fran Caballero
+        </h1>
+        <p
+          class="description w-full text-[1.1rem] text-[#33393a] sm:w-9/12 sm:text-2xl"
+        >
+          Hola, soy un desarrollador <i lang="en">full&#8209;stack</i> centrado en
+          construir aplicaciones bien estructuradas e intuitivas.
+        </p>
+      </header>
+      <div>
+        <div
+          class="blob-1 absolute top-[10%] left-[50%] -z-20 h-[200px] w-[200px] bg-[#4EAC80] opacity-20 blur-3xl sm:h-[250px] sm:w-[250px]"
+        >
+        </div>
+        <div
+          class="blob-2 absolute top-[35%] left-[30%] -z-10 h-[200px] w-[200px] bg-[#72B7E8] opacity-40 blur-3xl sm:h-[250px] sm:w-[250px]"
+        >
+        </div>
+      </div>
+    </div>
+    <section class="flex flex-col py-18">
+      <div
+        class="mx-auto flex w-[80%] flex-col gap-12 md:w-[700px] lg:w-[900px]"
+      >
+        <h2 class="text-3xl font-semibold sm:text-4xl">Proyectos</h2>
+        <div
+          class="flex max-w-full overflow-hidden rounded-xl bg-gray-50 sm:relative sm:block sm:h-auto"
+        >
+          <div class="flex h-[440px] flex-col bg-[#F5F5F7] sm:h-auto">
+            <a href="teamup" class="block aspect-[3341/1687]">
+              <Image
+                src={teamupThumbnail}
+                alt="Presentación del proyecto TeamUp, un clon de ClickUp"
+                priority
+                class="max-h-full w-auto transition-transform duration-300 ease-in-out hover:scale-105"
+              />
+            </a>
+            <div class="relative flex-1 sm:static">
+              <h3
+                class="absolute bottom-[76%] left-[6%] text-[1.3rem] sm:bottom-[33%] sm:text-[1.2rem] md:text-[1.3rem] lg:text-3xl"
+              >
+                TeamUp – Clon de ClickUp
+              </h3>
+              <p
+                class="absolute bottom-[30%] left-[6%] w-[85%] pr-[8px] text-[0.70rem] text-[#33393a] sm:bottom-[17%] sm:w-[90%] sm:text-[0.50rem] md:text-[0.7rem] lg:w-[750px] lg:text-[0.8rem]"
+              >
+                Aplicación de gestión de trabajo basada en la popular
+                herramienta, con colaboración en equipo flexible mediante roles
+                de usuario granulares, vista de tareas en listas o tablones, un
+                potente sistema de agrupación, estructura de organización
+                jerárquica multinivel y estados de tareas personalizables.
+              </p>
+              <a
+                href="teamup"
+                class="absolute bottom-[6%] left-[6%] rounded-md bg-black px-3 py-1.5 text-[0.8rem] font-semibold text-white hover:bg-gray-800 sm:px-[10px] sm:py-[5px] sm:text-[0.5rem] md:text-[0.8rem] lg:px-4 lg:py-2"
+                >Saber más</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col bg-[#F5F5F7]">
+      <div
+        class="mx-auto flex w-[80%] flex-col py-18 md:w-[700px] lg:w-[900px]"
+      >
+        <h2 class="text-3xl font-semibold sm:text-4xl">Sobre mí</h2>
+        <div class="flex flex-col items-center gap-10 md:flex-row md:gap-20">
+          <div>
+            <p class="my-8 text-[#33393a] lg:text-lg">
+              Soy un desarrollador autodidacta que disfruta del proceso completo
+              del desarrollo de <i lang="en">software</i>, desde la arquitectura
+              de datos a los elementos interactivos. Me centro en crear
+              soluciones que equilibran rendimiento eficiente con código claro y
+              fácil de mantener, y priorizo aplicar prácticas de desarrollo
+              sólidas en mis proyectos.
+            </p>
+            <p class="my-8 text-[#33393a] lg:text-lg">
+              Tengo experiencia en crear aplicaciones usando JavaScript,
+              TypeScript, Angular, Node.js y SQL. También tengo conocimiento en
+              Java y Spring Boot.
+            </p>
+            <p class="my-8 text-gray-800 lg:text-lg">
+              Busco una oportunidad para poner mis habilidades en práctica y
+              seguir avanzando como desarrollador en un entorno profesional.
+            </p>
+          </div>
+          <Image
+            class="object-none"
+            src={personalPicture}
+            alt="Fran Caballero"
+            width="300"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const startIntro = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("intro-ready");
+      });
+    });
+  };
+
+  if ("fonts" in document) {
+    Promise.race([
+      document.fonts.ready,
+      new Promise((resolve) => setTimeout(resolve, 1000)),
+    ]).then(startIntro);
+  } else {
+    startIntro();
+  }
+</script>
+
+<style>
+  .name,
+  .description {
+    opacity: 0;
+  }
+
+  :global(.intro-ready) .name {
+    animation: name-fade-in 2000ms 200ms forwards;
+  }
+
+  :global(.intro-ready) .description {
+    animation: name-fade-in 1500ms 1200ms forwards;
+  }
+
+  @keyframes name-fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .name,
+    .description {
+      opacity: 1;
+
+      animation: none;
+    }
+
+    .blob-1,
+    .blob-2 {
+      animation: none;
+    }
+  }
+
+  .blob-1 {
+    animation-name: move-blob-1;
+    animation-duration: 25s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  .blob-2 {
+    animation-name: move-blob-2;
+    animation-duration: 25s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes move-blob-1 {
+    0% {
+      transform: translate(0, 0) scale(1);
+
+      border-radius: 60% 40% 30% 70% / 50% 60% 70% 40%;
+    }
+    25% {
+      transform: translate(20px, 40px) scale(1.1);
+
+      border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+    }
+    50% {
+      transform: translate(-30px, 20px) scale(0.9);
+
+      border-radius: 40% 60% 40% 60% / 70% 30% 70% 30%;
+    }
+    75% {
+      transform: translate(80px, -50px) scale(1.2);
+
+      border-radius: 50% 50% 70% 30% / 40% 60% 30% 70%;
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+
+      border-radius: 60% 40% 30% 70% / 50% 60% 70% 40%;
+    }
+  }
+
+  @keyframes move-blob-2 {
+    0% {
+      transform: translate(0, 0) scale(1);
+
+      border-radius: 40% 60% 70% 30% / 60% 50% 40% 70%;
+    }
+    25% {
+      transform: translate(-30px, -20px) scale(0.8);
+
+      border-radius: 50% 50% 30% 70% / 50% 50% 60% 40%;
+    }
+    50% {
+      transform: translate(30px, -50px) scale(1.1);
+
+      border-radius: 60% 40% 60% 40% / 30% 70% 30% 70%;
+    }
+    75% {
+      transform: translate(50px, 40px) scale(0.95);
+
+      border-radius: 30% 70% 50% 50% / 70% 30% 40% 60%;
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+
+      border-radius: 40% 60% 70% 30% / 60% 50% 40% 70%;
+    }
+  }
+</style>

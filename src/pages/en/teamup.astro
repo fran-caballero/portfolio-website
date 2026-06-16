@@ -1,0 +1,646 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout
+  title="TeamUp – ClickUp Clone | Fran Caballero"
+  description="TeamUp is a ClickUp clone built as a full-stack collaborative work management app, with granular roles, hierarchical tasks and real-time notifications."
+  footerBackground="#F5F5F7"
+>
+  <main class="teamup-page">
+    <div class="teamup-page-layout">
+      <div class="teamup-content flex flex-col gap-[24px]">
+        <div class="pt-5 pb-[12px] sm:pt-20 sm:pb-7">
+          <h1 class="text-[1.6rem] font-semibold sm:text-5xl">
+            TeamUp – ClickUp Clone
+          </h1>
+        </div>
+        <div
+          class="aspect-[16/9] max-h-full w-full rounded-md border-2 border-[#F7F8F9]"
+        >
+          <img
+            src="/teamup-creative-space.png"
+            loading="eager"
+            decoding="sync"
+            fetchpriority="high"
+            alt="Colourful TeamUp board view of the Creative Space, with grouped tasks and the Workspace sidebar open."
+            class="rounded-md"
+          />
+        </div>
+        <div class="flex justify-between">
+          <div
+            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:flex"
+          >
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="Angular"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="angular" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Angular
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              data-tip="TypeScript"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon
+                  name="typescript"
+                  class="size-[0.8rem] sm:size-[1.2rem]"
+                />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  TypeScript
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              data-tip="Node.js"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="node-js" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Node.js
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="PostgreSQL"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="postgresql" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  PostgreSQL
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              data-tip="Socket.IO"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="socket-io" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Socket.IO
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              data-tip="Docker"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="docker" class="size-[1.5rem] sm:size-[2rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Docker
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/fran-caballero/teamup-server"
+            class="flex h-[28px] items-center gap-[8px] rounded-md bg-[#F8FAFC] pr-[8px] pl-[4px] text-[0.7rem] hover:bg-[#e9ecee] sm:h-[34px] sm:text-base"
+          >
+            <Icon name="github" class="sm:size-[1.4rem]" />
+            <span class="hidden sm:block"> GitHub </span>
+            <Icon name="external-link" class="size-[0.7rem] sm:size-[1rem]" />
+          </a>
+        </div>
+
+        <div class="teamup-body">
+          <nav class="teamup-section-nav" aria-label="Section navigation">
+            <a
+              href="#overview"
+              class="is-active"
+              data-section-link="overview"
+              aria-current="true"
+            >
+              Overview
+            </a>
+            <a href="#goal" data-section-link="goal">Goal</a>
+            <a href="#features" data-section-link="features">Features</a>
+            <a href="#technical" data-section-link="technical">
+              Technical highlights
+            </a>
+            <a href="#challenges" data-section-link="challenges">Challenges</a>
+            <a href="#try-it" data-section-link="try-it">Try it</a>
+          </nav>
+
+          <div class="teamup-body-content flex flex-col gap-[28px]">
+            <section id="overview">
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem] lg:text-lg">
+                <strong class="font-semibold text-black"> TeamUp </strong> is a full-stack
+                work management app based on the design and main features of ClickUp,
+                one of the most popular tools for managing tasks collaboratively.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                It recreates the platform's look and core workflows while
+                implementing a simplified but substantial hierarchical
+                permissions system, nested entity relationships, real-time
+                notifications and task assignments.
+              </p>
+            </section>
+            <section id="goal">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">Goal</h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                I wanted to rebuild a recognisable app from scratch and
+                reproduce not only the interface, but also part of the
+                complexity behind role-based collaborative work.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                What I found interesting about ClickUp was the combination of a
+                Kanban board approach and traditional task management with the
+                added challenge of nested sections and granular roles. I chose
+                some of the most iconic features and shaped them into a
+                functional product.
+              </p>
+            </section>
+            <section id="features">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Features
+              </h3>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Role system
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Users can invite others to their Workspace, assigning them
+                either a common role for the whole Workspace or different
+                permissions for specific entities. These permissions can later
+                be modified through a friendly interface, which handles
+                inheritance. Roles restrict certain actions, such as the ability
+                to edit or delete sections or invite other users.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                A more detailed explanation of this system is available in the
+                app section called <strong class="font-semibold text-black">
+                  Roles & Permissions - Docs
+                </strong>.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Hierarchical structure
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                The app features a hierarchical structure for organising tasks.
+                There are five main entity types in this application:
+              </p>
+              <ul class="mt-[24px]">
+                <li class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black"
+                    >- Workspaces:
+                  </strong>
+                  These are the sections at the top level. They can contain several
+                  Spaces. They can be used for separating completely unrelated areas
+                  (e.g. different companies, personal and work life...).
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Spaces: </strong> These
+                  sections are helpful to divide a Workspace according to the different
+                  branches a topic can have, such as different teams working in a
+                  company.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Folders: </strong> Folders
+                  group lists together, useful for projects or subdivisions inside
+                  a team.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Lists: </strong> Lists
+                  group Tasks together. They can either be inside Folders or directly
+                  inside Spaces. They're useful for divisions in a project. Each
+                  List has its own statuses, which can be of type <strong
+                    class="font-semibold text-black">Not Started</strong
+                  >, <strong class="font-semibold text-black">Active</strong> or
+                  <strong class="font-semibold text-black">Done</strong>, with
+                  customisable names and colours.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <span class="font-semibold text-black">- Tasks: </span> Tasks are
+                  always inside lists. They have a name and a status chosen from
+                  the options defined for their List. Users can also set additional
+                  attributes on them, such as a due date, an assignee or a description
+                  with text formatting through the full view.
+                </li>
+              </ul>
+              <div class="my-[50px] flex flex-col items-center">
+                <img
+                  src="/teamup-production-space.png"
+                  alt="TeamUp List view showing tasks inside the Production Space grouped by its different lists."
+                  class="h-auto max-h-full w-full max-w-[705px] rounded-md border-2 border-[#F7F8F9]"
+                />
+                <p class="mt-3 text-center text-sm text-[#697174]">
+                  Tasks inside a Space grouped by lists.
+                </p>
+              </div>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Board and List views
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Users can choose to view Tasks on Kanban boards or in classic
+                lists. These views are available in Spaces, Folders and Lists.
+                Each view allows users to organise Tasks by status, priority,
+                due date and assignee.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Personal List, My Work and Assigned to me
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                The app also includes a <strong class="font-semibold text-black"
+                  >Personal List</strong
+                > for every user, <strong class="font-semibold text-black"
+                  >My Work</strong
+                > and <strong class="font-semibold text-black"
+                  >Assigned to me</strong
+                > sections, helping users work across multiple lists without manually
+                navigating the full hierarchy.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Collaboration
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Users can invite collaborators, receive notifications and handle
+                Workspace access through real-time flows powered by Socket.IO.
+              </p>
+            </section>
+            <section id="technical">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Technical highlights
+              </h3>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Frontend
+              </h4>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The app is built with a <strong class="font-semibold text-black"
+                  >core / features / shared
+                </strong> structure, separating app shell and cross-cutting concerns
+                from feature-specific code and reusable UI pieces.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The state is managed through services, keeping Workspace, user,
+                membership, loading and notifications logic out of individual
+                components, while route validity and token refresh are
+                centralised through route guards and interceptors.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The Workspace service is the source of most data used in the
+                app, which saves a client-side representation of the workspace,
+                with nested entities exposed as lookup maps for Spaces, Folders,
+                Lists and Tasks. The app also uses a Task grouping service to
+                transform data in a centralised place for the different board
+                and list views.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                TeamUp also incorporates other technical features to make the
+                user experience smoother, such as optimistic updates with
+                rollback behaviour.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Backend and Data Layer
+              </h4>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The backend is layered into controllers, services and
+                repositories:
+              </p>
+              <ul class="ml-8">
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - <span class="font-semibold text-black">Controllers</span> are
+                  kept thin. They handle requests and responses, keeping business
+                  rules centralised in services they communicate with.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - <span class="font-semibold text-black">Services</span> are mainly
+                  responsible for authorisation, data validation and communication
+                  with the repositories, with concerns roughly defined by the different
+                  entities of the app, as well as others that handle socket emission
+                  and authentication.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - <span class="font-semibold text-black">Repositories</span> use
+                  raw SQL, making complex queries more predictable than using ORM
+                  abstractions. This includes query-level assembly of nested Workspace
+                  data with membership-based filtering before results reach application
+                  code.
+                </li>
+              </ul>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                There is also middleware responsible for regular and socket
+                authentication, rate limiting and error handling.
+              </p>
+            </section>
+            <section id="challenges">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Challenges
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                One of the biggest challenges was the implementation of a
+                hierarchical structure with several levels. The interaction
+                between them, especially with lists that can be included either
+                inside folders or directly inside spaces, required me to
+                carefully plan data and event flow between different components.
+                I opted for a single source of truth for the Workspace data
+                through an Angular service.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Another main hurdle when developing this app was the creation of
+                different roles. It added a substantial level of complexity,
+                since it was crucial to enforce the system both on the backend,
+                through several checks for each possible operation, and on the
+                frontend, by limiting what the user is able to do according to
+                their specific role.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The interaction between these two features introduced additional
+                complexity. It was necessary to create proper database queries
+                that preserved the nested structure, while also filtering the
+                result to include only the entities the user has access to. On
+                the client, this interaction was particularly visible in the
+                <strong class="font-semibold text-black">
+                  Invite to Workspace</strong
+                > menu, which required me to design a system where the user could
+                easily understand the role inheritance while also being prevented
+                from performing unauthorised actions.
+              </p>
+              <div class="mt-[50px] flex flex-col items-center">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                  aria-label="TeamUp edit permissions menu open for a Workspace member."
+                  class="w-full max-w-[705px] rounded-md"
+                >
+                  <source
+                    src="/teamup-edit-permissions-menu.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <p class="mt-3 text-center text-sm text-[#697174]">
+                  Edit permissions menu used to adjust each member’s role.
+                </p>
+              </div>
+            </section>
+
+            <section id="try-it">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Try it
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The app is available to try. Since it requires authentication,
+                there are two options to make the testing experience as friendly
+                as possible:
+              </p>
+              <ul>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Through an existing demo user:
+                  </strong> A user with a prebuilt demo Workspace is available for
+                  a quick view of what the app offers. The demo user credentials
+                  are auto-filled when pressing the Use demo account button on the
+                  login page.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Creating a quick user:
+                  </strong>
+                  Testers can also create a quick user in the sign-up window using
+                  a button that generates credentials. Creating a user doesn't require
+                  an email address. You can create one or more, in case you would
+                  like to test collaboration features.
+                </li>
+              </ul>
+            </section>
+            <div class="my-[50px] flex justify-center">
+              <a href="https://teamup.fran-caballero.dev">
+                <img
+                  src="/teamup-login-page.png"
+                  alt="TeamUp login page with demo account and quick user creation options."
+                  class="w-full max-w-[705px] rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  const sections = Array.from(
+    document.querySelectorAll(".teamup-page section[id]"),
+  );
+  const sectionLinks = Array.from(
+    document.querySelectorAll("[data-section-link]"),
+  );
+
+  const setActiveSection = (activeId: string) => {
+    sectionLinks.forEach((link) => {
+      const isActive = link.getAttribute("data-section-link") === activeId;
+
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  let activeSectionUpdateFrame = 0;
+
+  const updateActiveSection = () => {
+    activeSectionUpdateFrame = 0;
+
+    let activeSectionId = sections[0]?.id;
+    const activationOffset = 120;
+
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= activationOffset) {
+        activeSectionId = section.id;
+      }
+    });
+
+    if (activeSectionId) {
+      setActiveSection(activeSectionId);
+    }
+  };
+
+  const requestActiveSectionUpdate = () => {
+    if (activeSectionUpdateFrame !== 0) {
+      return;
+    }
+
+    activeSectionUpdateFrame =
+      window.requestAnimationFrame(updateActiveSection);
+  };
+
+  window.addEventListener("scroll", requestActiveSectionUpdate, {
+    passive: true,
+  });
+  window.addEventListener("resize", requestActiveSectionUpdate);
+
+  requestActiveSectionUpdate();
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 2rem;
+  }
+
+  .teamup-page-layout {
+    margin-inline: 10%;
+  }
+
+  .teamup-section-nav {
+    display: none;
+  }
+
+  .teamup-section-nav a {
+    display: block;
+    padding: 0.45rem 0 0.45rem 1rem;
+
+    line-height: 1.2;
+    font-size: 1rem;
+
+    border-left: 3px solid #e5e7eb;
+    color: #697174;
+    transition:
+      border-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .teamup-section-nav a:hover,
+  .teamup-section-nav a.is-active {
+    font-weight: 600;
+
+    border-left-color: #000;
+    color: #000;
+  }
+
+  .tech-stack > div {
+    transform: translateY(8px);
+
+    opacity: 0;
+
+    animation: tech-stack-fade-in 450ms ease-out forwards;
+  }
+
+  .tech-stack > div:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .tech-stack > div:nth-child(2) {
+    animation-delay: 160ms;
+  }
+
+  .tech-stack > div:nth-child(3) {
+    animation-delay: 240ms;
+  }
+
+  .tech-stack > div:nth-child(4) {
+    animation-delay: 320ms;
+  }
+
+  .tech-stack > div:nth-child(5) {
+    animation-delay: 400ms;
+  }
+
+  .tech-stack > div:nth-child(6) {
+    animation-delay: 480ms;
+  }
+
+  @keyframes tech-stack-fade-in {
+    to {
+      transform: translateY(0);
+
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .teamup-page-layout {
+      margin-inline: calc((100% - 700px) / 2);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .teamup-page-layout {
+      max-width: 1260px;
+      margin-inline: auto;
+    }
+
+    .teamup-content > :not(.teamup-body) {
+      width: 900px;
+      margin-left: 220px;
+    }
+
+    .teamup-body {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .teamup-body-content {
+      width: 900px;
+    }
+
+    .teamup-section-nav {
+      position: sticky;
+      top: 48px;
+      transform: translateX(-2rem);
+      display: block;
+      flex: 0 0 180px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .tech-stack > div {
+      transform: none;
+
+      opacity: 1;
+
+      animation: none;
+    }
+  }
+</style>

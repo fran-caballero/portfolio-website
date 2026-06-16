@@ -1,0 +1,679 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout
+  title="TeamUp – Clon de ClickUp | Fran Caballero"
+  description="TeamUp es un clon de ClickUp desarrollado como aplicación full-stack de gestión de trabajo colaborativo, con roles granulares, jerarquía de tareas y notificaciones en tiempo real."
+  footerBackground="#F5F5F7"
+>
+  <main class="teamup-page">
+    <div class="teamup-page-layout">
+      <div class="teamup-content flex flex-col gap-[24px]">
+        <div class="pt-5 pb-[12px] sm:pt-20 sm:pb-7">
+          <h1 class="text-[1.6rem] font-semibold sm:text-5xl">
+            TeamUp – Clon de ClickUp
+          </h1>
+        </div>
+        <div
+          class="aspect-[16/9] max-h-full w-full rounded-md border-2 border-[#F7F8F9]"
+        >
+          <img
+            src="/teamup-creative-space.png"
+            loading="eager"
+            decoding="sync"
+            fetchpriority="high"
+            alt="Vista de tablero colorida de TeamUp en el Espacio 'Creative', con tareas agrupadas y la barra lateral del Espacio de trabajo abierta."
+            class="rounded-md"
+          />
+        </div>
+        <div class="flex justify-between">
+          <div
+            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:flex"
+          >
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="Angular"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="angular" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Angular
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              data-tip="TypeScript"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon
+                  name="typescript"
+                  class="size-[0.8rem] sm:size-[1.2rem]"
+                />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  TypeScript
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              data-tip="Node.js"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="node-js" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Node.js
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="PostgreSQL"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="postgresql" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  PostgreSQL
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              data-tip="Socket.IO"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="socket-io" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Socket.IO
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              data-tip="Docker"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="docker" class="size-[1.5rem] sm:size-[2rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Docker
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://github.com/fran-caballero/teamup-server"
+            class="flex h-[28px] items-center gap-[8px] rounded-md bg-[#F8FAFC] pr-[8px] pl-[4px] text-[0.7rem] hover:bg-[#e9ecee] sm:h-[34px] sm:text-base"
+          >
+            <Icon name="github" class="sm:size-[1.4rem]" />
+            <span class="hidden sm:block"> GitHub </span>
+            <Icon name="external-link" class="size-[0.7rem] sm:size-[1rem]" />
+          </a>
+        </div>
+
+        <div class="teamup-body">
+          <nav class="teamup-section-nav" aria-label="Navegación de secciones">
+            <a
+              href="#intro"
+              class="is-active"
+              data-section-link="intro"
+              aria-current="true"
+            >
+              Introducción
+            </a>
+            <a href="#objetivo" data-section-link="objetivo">Objetivo</a>
+            <a href="#funcionalidades" data-section-link="funcionalidades">
+              Funcionalidades
+            </a>
+            <a href="#tecnico" data-section-link="tecnico">Aspectos técnicos</a>
+            <a href="#retos" data-section-link="retos">Retos</a>
+            <a href="#pruebala" data-section-link="pruebala">Pruébala</a>
+          </nav>
+
+          <div class="teamup-body-content flex flex-col gap-[28px]">
+            <section id="intro">
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem] lg:text-lg">
+                <strong class="font-semibold text-black"> TeamUp </strong> es una
+                aplicación
+                <i lang="en">full-stack</i> de gestión de trabajo basada en el diseño
+                y las principales funcionalidades de ClickUp, una de las herramientas
+                más populares para administrar tareas de forma colaborativa.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Replica el aspecto visual y las principales dinámicas
+                colaborativas de la plataforma, a la vez que implementa un
+                sistema de permisos jerárquicos simplificado pero sustancial,
+                relaciones entre entidades anidadas, notificaciones en tiempo
+                real y asignación de tareas.
+              </p>
+            </section>
+            <section id="objetivo">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Objetivo
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Quería reconstruir una aplicación reconocible desde cero y
+                reproducir no solo la interfaz, sino también parte de la
+                complejidad detrás del trabajo colaborativo basado en roles.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Lo interesante de ClickUp era la combinación de un enfoque de
+                tablero Kanban con la gestión tradicional de tareas, con el reto
+                añadido de secciones anidadas y roles granulares. Escogí algunas
+                de sus funcionalidades más icónicas y creé un producto funcional
+                con ellas.
+              </p>
+            </section>
+            <section id="funcionalidades">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Funcionalidades
+              </h3>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Sistema de roles
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Los usuarios pueden invitar a otras personas a su Espacio de
+                trabajo, asignándoles un rol común para todo el Espacio de
+                trabajo o permisos distintos para entidades concretas. Estos
+                permisos pueden modificarse más adelante mediante una interfaz
+                accesible, que gestiona la herencia. Los roles restringen
+                ciertas acciones, como la capacidad de editar o eliminar
+                secciones o invitar a otros usuarios.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Una explicación más detallada de este sistema está disponible en
+                español e inglés en la sección de la aplicación llamada <strong
+                  class="font-semibold text-black"
+                  >Roles & Permissions - Docs</strong
+                >.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Estructura jerárquica
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                La aplicación cuenta con una estructura jerárquica para
+                organizar las tareas. Hay cinco tipos principales de entidades
+                en esta aplicación:
+              </p>
+              <ul class="mt-[24px]">
+                <li class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black"
+                    >- Espacios de trabajo:
+                  </strong>
+                  Son las secciones de nivel superior. Pueden contener varios Espacios.
+                  Sirven para separar áreas completamente independientes (por ejemplo,
+                  diferentes empresas, vida personal y trabajo...).
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Espacios: </strong>
+                  Estas secciones ayudan a dividir un Espacio de trabajo según las
+                  diferentes ramas que puede tener un tema, como distintos equipos
+                  trabajando en una empresa.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Carpetas: </strong>
+                  Las Carpetas ayudan a agrupar listas, algo útil para proyectos
+                  o subdivisiones dentro de un equipo.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">- Listas: </strong> Las
+                  Listas agrupan Tareas. Pueden estar dentro de Carpetas o directamente
+                  dentro de Espacios. Son útiles para divisiones dentro de un proyecto.
+                  Cada Lista tiene sus propios estados, que pueden ser de tipo <strong
+                    class="font-semibold text-black">Not Started</strong
+                  > (sin comenzar), <strong class="font-semibold text-black"
+                    >Active</strong
+                  > (activo) o <strong class="font-semibold text-black"
+                    >Done</strong
+                  >
+                  (terminado), con nombres y colores personalizables.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <span class="font-semibold text-black">- Tareas: </span> Las Tareas
+                  están siempre dentro de listas. Tienen un nombre y un estado elegido
+                  entre las opciones definidas para su Lista. También pueden tener
+                  otros atributos, como una fecha límite o una persona asignada.
+                  A través de la vista completa, los usuarios también pueden añadir
+                  una descripción con opciones de formato.
+                </li>
+              </ul>
+              <div class="my-[50px] flex flex-col items-center">
+                <img
+                  src="/teamup-production-space.png"
+                  alt="Vista de Lista de TeamUp mostrando tareas dentro del Espacio 'Production' agrupadas por sus distintas listas."
+                  class="h-auto max-h-full w-full max-w-[705px] rounded-md border-2 border-[#F7F8F9]"
+                />
+                <p class="mt-3 text-center text-sm text-[#697174]">
+                  Vista de un espacio con tareas agrupadas por Lista.
+                </p>
+              </div>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Vistas de tablero y lista
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Los usuarios pueden elegir ver las Tareas en tableros Kanban o
+                en listas clásicas. Estas vistas están disponibles en Espacios,
+                Carpetas y Listas. Cada vista permite organizar Tareas por
+                estado, prioridad, fecha límite y persona asignada.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Personal List, My Work y Assigned to me
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                La aplicación también incluye una <strong
+                  class="font-semibold text-black">Lista personal</strong
+                > para cada usuario y las secciones <strong
+                  class="font-semibold text-black">My Work</strong
+                > (Mi trabajo) y <strong class="font-semibold text-black"
+                  >Assigned to me</strong
+                > (Asignado a mí), lo que ayuda a los usuarios a trabajar con tareas
+                de múltiples listas sin tener que navegar manualmente por toda la
+                jerarquía.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                Colaboración
+              </h4>
+              <p class="mt-3 text-[#33393a] sm:text-[1.1rem]">
+                Los usuarios pueden invitar a colaboradores, recibir
+                notificaciones y gestionar el acceso al Espacio de trabajo
+                mediante flujos en tiempo real con Socket.IO.
+              </p>
+            </section>
+            <section id="tecnico">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Aspectos técnicos destacados
+              </h3>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                <i lang="en">Frontend</i>
+              </h4>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                La aplicación está construida con una estructura <strong
+                  class="font-semibold text-black"
+                  ><i lang="en">core / features / shared</i></strong
+                >, separando el <i lang="en">shell</i> de la aplicación y las responsabilidades
+                transversales del código específico de cada funcionalidad y de los
+                elementos reutilizables de la <i lang="en">UI</i>.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                El estado se gestiona mediante servicios, manteniendo la lógica
+                de Espacio de trabajo, usuario, membresía, carga y
+                notificaciones fuera de los componentes individuales, mientras
+                que la validez de las rutas y la renovación de <i lang="en"
+                  >tokens</i
+                > se centralizan mediante
+                <i lang="en">route guards</i> e interceptores.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                El servicio de Espacio de trabajo es la fuente de la mayor parte
+                de los datos utilizados en la aplicación, y guarda una
+                representación en el cliente de los datos de esta entidad, con
+                sus secciones anidadas (Espacios, Carpetas, Listas y Tareas)
+                expuestas también como <i lang="en">lookup maps</i>. La
+                aplicación también usa un servicio de agrupación de Tareas para
+                transformar los datos en un lugar centralizado para las
+                distintas vistas de Tablero y Lista.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                TeamUp también cuenta con otras funcionalidades técnicas para
+                hacer que la experiencia de usuario sea más fluida, como
+                actualizaciones optimistas con <i lang="en">rollback</i>.
+              </p>
+              <h4 class="mt-6 text-[1.4rem] font-medium sm:text-[1.5rem]">
+                <i lang="en">Backend</i>
+              </h4>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                El <i lang="en">backend</i> está estructurado en las capas de controladores,
+                servicios y repositorios:
+              </p>
+              <ul class="ml-8">
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - Los <span class="font-semibold text-black">
+                    controladores
+                  </span> se limitan a gestionar las peticiones y respuestas, manteniendo
+                  las reglas de negocio centralizadas en los servicios con los que
+                  se comunican.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - Los <span class="font-semibold text-black">
+                    servicios
+                  </span> son principalmente responsables de la autorización, la
+                  validación de datos y la comunicación con los repositorios, con
+                  responsabilidades definidas principalmente alrededor de las distintas
+                  entidades de la aplicación, además de otros que gestionan la emisión
+                  de <i lang="en">sockets</i> y la autenticación.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  - Los <span class="font-semibold text-black">
+                    repositorios
+                  </span>
+                  usan SQL sin un ORM, lo que hace que las consultas complejas sean
+                  más predecibles que usando abstracciones. Esto incluye construir
+                  a nivel de consulta la estructura de datos anidados del Espacio
+                  de trabajo, con filtrado basado en permisos antes de que los resultados
+                  lleguen al código de la aplicación.
+                </li>
+              </ul>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Además, hay <i lang="en">middleware</i> responsable de la autenticación
+                estándar y de <i lang="en">socket</i>, la limitación de tráfico
+                y la gestión de errores.
+              </p>
+            </section>
+            <section id="retos">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Retos
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Uno de los mayores retos fue la implementación de una estructura
+                jerárquica con varios niveles. La interacción entre ellos,
+                especialmente con listas que pueden incluirse tanto dentro de
+                carpetas como directamente dentro de espacios, me obligó a
+                planificar cuidadosamente el flujo de datos y eventos entre
+                distintos componentes. Opté por una <i lang="en"
+                  >single source of truth</i
+                > para los datos del Espacio de trabajo mediante un servicio de Angular.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Otro de los principales obstáculos al desarrollar esta
+                aplicación fue la implementación de un sistema de roles. Añadió
+                un nivel sustancial de complejidad, ya que era crucial aplicar
+                el sistema tanto en el
+                <i lang="en">backend</i>, mediante varias comprobaciones para
+                cada posible operación, como en el <i lang="en">frontend</i>,
+                limitando lo que el usuario puede hacer según su rol específico.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                La interacción entre estas dos funcionalidades también planteó
+                algunas dificultades. Fue necesario crear consultas de base de
+                datos que preservasen la estructura anidada, filtrando al mismo
+                tiempo el resultado para incluir solo las entidades a las que el
+                usuario tiene acceso. En el cliente, esta interacción fue
+                especialmente visible en el menú <strong
+                  class="font-semibold text-black"
+                >
+                  Invite to Workspace</strong
+                >, que requirió diseñar un sistema donde el usuario pudiera
+                entender fácilmente la herencia de roles y, al mismo tiempo,
+                impidiera acciones no autorizadas.
+              </p>
+              <div class="mt-[50px] flex flex-col items-center">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                  aria-label="Menú de edición de permisos de TeamUp para un miembro del Espacio de trabajo."
+                  class="w-full max-w-[705px] rounded-md"
+                >
+                  <source
+                    src="/teamup-edit-permissions-menu.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <p class="mt-3 text-center text-sm text-[#697174]">
+                  Menú de edición de permisos para ajustar roles de cada
+                  miembro.
+                </p>
+              </div>
+            </section>
+
+            <section id="pruebala">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Pruébala
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                La aplicación se puede probar. Al requerir autenticación, hay
+                dos opciones para hacer que la experiencia de prueba sea lo más
+                sencilla posible:
+              </p>
+              <ul>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - A través de un usuario de prueba existente:
+                  </strong> Hay disponible un usuario con un Espacio de trabajo ya
+                  creado para ver rápidamente lo que ofrece la aplicación. Las credenciales
+                  de dicho usuario se autocompletan al pulsar <i lang="en"
+                    >Use demo account</i
+                  > en la página de inicio de sesión.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Creando un usuario rápidamente:
+                  </strong>
+                  Los visitantes también pueden crear un usuario de prueba usando
+                  un botón para generar credenciales en la ventana de registro. Registrarse
+                  no requiere correo electrónico. Puedes crear uno o varios usuarios,
+                  en caso de que quieras probar las funcionalidades de colaboración.
+                </li>
+              </ul>
+            </section>
+            <div class="my-[50px] flex justify-center">
+              <a href="https://teamup.fran-caballero.dev">
+                <img
+                  src="/teamup-login-page.png"
+                  alt="Página de inicio de sesión de TeamUp con opciones de cuenta de prueba y creación rápida de usuario."
+                  class="w-full max-w-[705px] rounded-md transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  const sections = Array.from(
+    document.querySelectorAll(".teamup-page section[id]"),
+  );
+  const sectionLinks = Array.from(
+    document.querySelectorAll("[data-section-link]"),
+  );
+
+  const setActiveSection = (activeId: string) => {
+    sectionLinks.forEach((link) => {
+      const isActive = link.getAttribute("data-section-link") === activeId;
+
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  let activeSectionUpdateFrame = 0;
+
+  const updateActiveSection = () => {
+    activeSectionUpdateFrame = 0;
+
+    let activeSectionId = sections[0].id;
+    const activationOffset = 120;
+
+    sections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= activationOffset) {
+        activeSectionId = section.id;
+      }
+    });
+
+    setActiveSection(activeSectionId);
+  };
+
+  const requestActiveSectionUpdate = () => {
+    if (activeSectionUpdateFrame !== 0) {
+      return;
+    }
+
+    activeSectionUpdateFrame =
+      window.requestAnimationFrame(updateActiveSection);
+  };
+
+  window.addEventListener("scroll", requestActiveSectionUpdate, {
+    passive: true,
+  });
+  window.addEventListener("resize", requestActiveSectionUpdate);
+
+  requestActiveSectionUpdate();
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 2rem;
+  }
+
+  .teamup-page-layout {
+    margin-inline: 10%;
+  }
+
+  .teamup-section-nav {
+    display: none;
+  }
+
+  .teamup-section-nav a {
+    display: block;
+    padding: 0.45rem 0 0.45rem 1rem;
+
+    line-height: 1.2;
+    font-size: 1rem;
+
+    border-left: 3px solid #e5e7eb;
+    color: #697174;
+    transition:
+      border-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .teamup-section-nav a:hover,
+  .teamup-section-nav a.is-active {
+    font-weight: 600;
+
+    border-left-color: #000;
+    color: #000;
+  }
+
+  .tech-stack > div {
+    transform: translateY(8px);
+
+    opacity: 0;
+
+    animation: tech-stack-fade-in 450ms ease-out forwards;
+  }
+
+  .tech-stack > div:nth-child(1) {
+    animation-delay: 80ms;
+  }
+
+  .tech-stack > div:nth-child(2) {
+    animation-delay: 160ms;
+  }
+
+  .tech-stack > div:nth-child(3) {
+    animation-delay: 240ms;
+  }
+
+  .tech-stack > div:nth-child(4) {
+    animation-delay: 320ms;
+  }
+
+  .tech-stack > div:nth-child(5) {
+    animation-delay: 400ms;
+  }
+
+  .tech-stack > div:nth-child(6) {
+    animation-delay: 480ms;
+  }
+
+  @keyframes tech-stack-fade-in {
+    to {
+      transform: translateY(0);
+
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .teamup-page-layout {
+      margin-inline: calc((100% - 700px) / 2);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .teamup-page-layout {
+      max-width: 1260px;
+      margin-inline: auto;
+    }
+
+    .teamup-content > :not(.teamup-body) {
+      width: 900px;
+      margin-left: 220px;
+    }
+
+    .teamup-body {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .teamup-body-content {
+      width: 900px;
+    }
+
+    .teamup-section-nav {
+      position: sticky;
+      top: 48px;
+      transform: translateX(-2rem);
+      display: block;
+      flex: 0 0 180px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .tech-stack > div {
+      transform: none;
+
+      opacity: 1;
+
+      animation: none;
+    }
+  }
+</style>

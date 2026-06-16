@@ -1,0 +1,129 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+
+const {
+  title,
+  description,
+  footerBackground = "transparent",
+  image = "/personal-picture-cropped.jpg",
+} = Astro.props;
+let currentPath = Astro.url.pathname;
+
+const pathSegments = currentPath.split("/");
+
+const currentLocale = pathSegments[1] === "en" ? "en" : "es";
+const ogLocale = currentLocale === "es" ? "es_ES" : "en_GB";
+const alternateOgLocale = currentLocale === "es" ? "en_GB" : "es_ES";
+
+if (pathSegments[1] === "en") {
+  pathSegments.splice(1, 1);
+  currentPath = pathSegments.join("/");
+}
+
+const homeUrl = getRelativeLocaleUrl(currentLocale, "/");
+const spanishUrl = getRelativeLocaleUrl("es", currentPath);
+const englishUrl = getRelativeLocaleUrl("en", currentPath);
+const siteUrl = Astro.site;
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const spanishAbsoluteUrl = new URL(spanishUrl, siteUrl).toString();
+const englishAbsoluteUrl = new URL(englishUrl, siteUrl).toString();
+const imageUrl = new URL(image, siteUrl).toString();
+const cvLabel = currentLocale === "es" ? "Ver CV" : "View CV";
+
+interface Props {
+  title: string;
+  description: string;
+  footerBackground?: string;
+  image?: string;
+}
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="preload"
+      href="/fonts/open-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es" href={spanishAbsoluteUrl} />
+    <link rel="alternate" hreflang="en" href={englishAbsoluteUrl} />
+    <link rel="alternate" hreflang="x-default" href={spanishAbsoluteUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fran Caballero" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={alternateOgLocale} />
+    <meta property="og:image" content={imageUrl} />
+  </head>
+  <body>
+    <nav class="flex h-20 items-center justify-between gap-12 px-15 sm:px-40">
+      <a href={homeUrl}>Fran Caballero</a>
+      <div class="flex gap-4">
+        <a
+          href={spanishUrl}
+          class={currentLocale === "es"
+            ? "font-semibold underline"
+            : "hover:font-semibold"}>ES</a
+        >
+        <a
+          href={englishUrl}
+          class={currentLocale === "en"
+            ? "font-semibold underline"
+            : "hover:font-semibold"}>EN</a
+        >
+      </div>
+    </nav>
+    <slot />
+    <footer class="flex" style={`background-color: ${footerBackground}`}>
+      <div
+        class="mx-auto flex w-[300px] flex-col justify-center py-10 md:w-[700px] md:py-18 lg:w-[900px]"
+      >
+        <div
+          class="mb-5 text-center text-[1.6rem] font-semibold md:mb-8 md:text-left md:text-3xl"
+        >
+          {currentLocale === "es" ? "Contacto" : "Contact"}
+        </div>
+        <div
+          class="flex flex-col items-center justify-between gap-5 text-[#33393a] md:flex-row"
+        >
+          <span class="text-sm text-[#33393a] md:text-xl"
+            >contact.francaballero@proton.me</span
+          >
+          <span class="flex gap-[24px] md:gap-[16px]">
+            <a href="https://github.com/fran-caballero" aria-label="GitHub">
+              <Icon name="github" class="size-[1.5rem] md:size-[2rem]" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fran-caballero-6a3165415/"
+              aria-label="LinkedIn"
+            >
+              <Icon name="linkedin" class="size-[1.5rem] md:size-[2rem]" />
+            </a>
+            <a
+              href="/cv-fran-caballero.pdf"
+              target="_blank"
+              aria-label={cvLabel}
+              title={cvLabel}
+            >
+              <Icon name="cv" class="size-[1.5rem] md:size-[2rem]" /></a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
