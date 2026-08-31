@@ -31,7 +31,7 @@ import { Icon } from "astro-icon/components";
         </div>
         <div class="flex justify-between">
           <div
-            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:flex"
+            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:grid lg:grid-cols-[repeat(4,min-content)]"
           >
             <div
               class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
@@ -69,10 +69,25 @@ import { Icon } from "astro-icon/components";
             </div>
             <div
               class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
-              data-tip="Node.js"
+              data-tip="Playwright"
             >
               <div
                 class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="playwright" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Playwright
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="Node.js"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="node-js" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -83,11 +98,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
               data-tip="PostgreSQL"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="postgresql" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -98,11 +113,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
               data-tip="Socket.IO"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="socket-io" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -113,11 +128,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
               data-tip="Docker"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="docker" class="size-[1.5rem] sm:size-[2rem]" />
                 <div
@@ -152,6 +167,9 @@ import { Icon } from "astro-icon/components";
             <a href="#features" data-section-link="features">Features</a>
             <a href="#technical" data-section-link="technical">
               Technical highlights
+            </a>
+            <a href="#e2e-testing" data-section-link="e2e-testing">
+              E2E testing
             </a>
             <a href="#challenges" data-section-link="challenges">Challenges</a>
             <a href="#try-it" data-section-link="try-it">Try it</a>
@@ -356,6 +374,58 @@ import { Icon } from "astro-icon/components";
                 There is also middleware responsible for regular and socket
                 authentication, rate limiting and error handling.
               </p>
+            </section>
+            <section id="e2e-testing">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                End-to-end testing
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                As part of the development of TeamUp, I incorporated an
+                end-to-end testing suite using Playwright. The
+                main focus was to validate key interactions: access control, the
+                task lifecycle, and navigation through the Workspace hierarchy
+                and its views.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                The reliability of the suite is underpinned by several design
+                decisions:
+              </p>
+              <ul>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Session management:
+                  </strong>
+                  A setup project saves the authentication state to reuse it across
+                  authenticated scenarios and avoid repeating the login process.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Stability against changes:
+                  </strong>
+                  The tests prioritise semantic locators based on accessibility roles,
+                  making them more resilient to potential structural changes in the
+                  DOM.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Data management:
+                  </strong>
+                  For the task creation flow, the test generates a unique name and
+                  cleans up the entity upon completion using a try/finally block.
+                  On the other hand, to validate hierarchical navigation, it leverages
+                  pre-existing data from the demo account to speed up the environment
+                  setup.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Continuous Integration (CI):
+                  </strong>
+                  The suite is integrated into a GitHub Actions workflow that automatically
+                  runs the tests on every push and pull request to the main branch,
+                  publishing an HTML report and capturing traces on retries to facilitate
+                  diagnostics.
+                </li>
+              </ul>
             </section>
             <section id="challenges">
               <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
@@ -583,6 +653,10 @@ import { Icon } from "astro-icon/components";
 
   .tech-stack > div:nth-child(6) {
     animation-delay: 480ms;
+  }
+
+  .tech-stack > div:nth-child(7) {
+    animation-delay: 560ms;
   }
 
   @keyframes tech-stack-fade-in {

@@ -31,7 +31,7 @@ import { Icon } from "astro-icon/components";
         </div>
         <div class="flex justify-between">
           <div
-            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:flex"
+            class="tech-stack flex flex-wrap gap-[10px] min-[450px]:grid min-[450px]:grid-cols-[repeat(3,min-content)] lg:grid lg:grid-cols-[repeat(4,min-content)]"
           >
             <div
               class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
@@ -69,10 +69,25 @@ import { Icon } from "astro-icon/components";
             </div>
             <div
               class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
-              data-tip="Node.js"
+              data-tip="Playwright"
             >
               <div
                 class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+              >
+                <Icon name="playwright" class="size-[1rem] sm:size-[1.5rem]" />
+                <div
+                  class="hidden text-[0.7rem] min-[450px]:block sm:text-base"
+                >
+                  Playwright
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              data-tip="Node.js"
+            >
+              <div
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="node-js" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -83,11 +98,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
               data-tip="PostgreSQL"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="postgresql" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -98,11 +113,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-center"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
               data-tip="Socket.IO"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-center rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="socket-io" class="size-[1rem] sm:size-[1.5rem]" />
                 <div
@@ -113,11 +128,11 @@ import { Icon } from "astro-icon/components";
               </div>
             </div>
             <div
-              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-end"
+              class="max-[450px]:tooltip max-[450px]:tooltip-bottom min-[450px]:justify-self-start"
               data-tip="Docker"
             >
               <div
-                class="flex h-[28px] items-center gap-[8px] justify-self-end rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
+                class="flex h-[28px] items-center gap-[8px] justify-self-start rounded-md bg-[#F8FAFC] p-[6px] min-[450px]:pr-[8px] min-[450px]:pl-[4px] sm:h-[34px]"
               >
                 <Icon name="docker" class="size-[1.5rem] sm:size-[2rem]" />
                 <div
@@ -153,6 +168,9 @@ import { Icon } from "astro-icon/components";
               Funcionalidades
             </a>
             <a href="#tecnico" data-section-link="tecnico">Aspectos técnicos</a>
+            <a href="#pruebas-e2e" data-section-link="pruebas-e2e">
+              Pruebas E2E
+            </a>
             <a href="#retos" data-section-link="retos">Retos</a>
             <a href="#pruebala" data-section-link="pruebala">Pruébala</a>
           </nav>
@@ -386,6 +404,63 @@ import { Icon } from "astro-icon/components";
                 y la gestión de errores.
               </p>
             </section>
+            <section id="pruebas-e2e">
+              <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
+                Pruebas <i lang="en">end-to-end</i>
+              </h3>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                Como parte del desarrollo de TeamUp, incorporé una <i lang="en"
+                  >suite</i
+                > de tests <i lang="en"> end-to-end</i> utilizando Playwright.
+                El enfoque principal fue validar las interacciones clave:
+                el control de acceso, el ciclo de vida de las tareas y la navegación
+                a través de la jerarquía del Espacio de trabajo y sus vistas.
+              </p>
+              <p class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                La fiabilidad de la <i lang="en">suite</i> se apoya en varias decisiones
+                de diseño:
+              </p>
+              <ul>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Gestión de la sesión:
+                  </strong>
+                  Un proyecto de preparación guarda el estado de autenticación para
+                  reutilizarlo en los escenarios autenticados y evitar repetir el
+                  inicio de sesión.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Estabilidad frente a cambios:
+                  </strong>
+                  Los tests priorizan localizadores semánticos basados
+                  en roles de accesibilidad para que sean más resistentes a posibles
+                  cambios estructurales en el <i lang="en">DOM</i>.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Gestión de datos:
+                  </strong>
+                  Para el flujo de creación de tareas, el <i lang="en">test</i>
+                  genera un nombre único y limpia la entidad al finalizar mediante
+                  un bloque <i lang="en">try/finally</i>. Por otro lado, para
+                  validar la navegación jerárquica, se aprovechan los datos
+                  preexistentes de la cuenta demo para agilizar la preparación
+                  del entorno.
+                </li>
+                <li class="mt-6 text-[#33393a] sm:text-[1.1rem]">
+                  <strong class="font-semibold text-black">
+                    - Integración continua (CI):
+                  </strong>
+                  La <i lang="en">suite</i> está integrada en un flujo de GitHub
+                  Actions que ejecuta las pruebas automáticamente ante cada <i
+                    lang="en">push</i
+                  > y cada <i lang="en">pull request</i> a la rama principal, publicando
+                  un informe HTML y capturando trazas en los reintentos para facilitar
+                  el diagnóstico.
+                </li>
+              </ul>
+            </section>
             <section id="retos">
               <h3 class="text-[1.8rem] font-semibold sm:text-[1.9rem]">
                 Retos
@@ -616,6 +691,10 @@ import { Icon } from "astro-icon/components";
 
   .tech-stack > div:nth-child(6) {
     animation-delay: 480ms;
+  }
+
+  .tech-stack > div:nth-child(7) {
+    animation-delay: 560ms;
   }
 
   @keyframes tech-stack-fade-in {
