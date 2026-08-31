@@ -114,7 +114,9 @@ interface Props {
               <Icon name="linkedin" class="size-[1.5rem] md:size-[2rem]" />
             </a>
             <a
-              href="/cv-fran-caballero.pdf"
+              href= {currentLocale === "es"
+            ? "/cv-fran-caballero-es.pdf"
+            : "/cv-fran-caballero-en.pdf"} 
               target="_blank"
               aria-label={cvLabel}
               title={cvLabel}
